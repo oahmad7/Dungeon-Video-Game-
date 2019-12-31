@@ -1,0 +1,133 @@
+GDF 5.0 Place Tests // Magic word, version number, and Environment name.
+
+PLACES 6	
+
+0
+11 	Entrance
+2
+This is the entrance.  There is a staircase going up, a door going east,
+and a door going north.
+
+1
+12	Pitfall Room
+2
+The floor here looks unstable.  (trap is triggered by picking up the book)
+There is a staircase going down.
+1 1001 2 21 0 11 		// Triggered by holding artifact 21
+
+1
+13	Danger Room
+2
+There are suspicious holes on the ceiling.  (trap is triggered by dropping 5 artifacts)
+A door leads south.
+1 1001 0 5 1 10
+
+2
+14	Wind Tunnel
+1
+Hold on to your hat!  There are doors going west and east.
+11 // Blows into the entrance
+
+3
+15	Haunted Tomb
+1
+Watch out for restless spirits.  There is a door going west.
+
+1
+16	Teleport Room
+2
+Energize!  (trap is triggered by 5 mobility in the room)
+A door leads north.
+1 1001 3 5 2 0
+
+DIRECTIONS 10
+
+1	11	E	14	0	// Entrance to wind tunnel
+2	14	W	11	0
+
+3	14	E	15	0	// WT to HT
+4	15	W	14	0
+
+5	11	N	13	0	// E to DR
+6	13	S	11	0
+
+7	11	U	12	0	// E to PR
+8	12	D	11	0
+
+9	11	S	16	0	// Entrance to Teleport Room
+10	16	N	11	0
+
+CHARACTERS 2
+
+PLAYER 		11
+1		Rincewind
+1
+A college dropout.
+
+PLAYER		11
+2		Twoflower
+1
+A naive tourist.
+
+
+ARTIFACTS	10	// Semi-random artifacts - New ones at the beginning.
+
+12
+21	20	10	0	Hitchiker's Guide
+2
+The Hitchiker's Guide appears as a small leather-bound book,
+with images of stars and planets on the cover.
+
+11
+22	100	20	0	Pot O Gold
+1
+This pot o' gold is filled with shiny gold coins.
+
+0
+23	10	1	0	Four-Leaf Clover
+1
+This four-leaf clover has been gold plated, to form a beautiful pendant.
+
+12
+1		1000	-1  0	Jewel-encrusted chest	// Too heavy to move!
+4
+The chest is about two feet by 3 feet by 2 feet high.
+It appears to be made of solid gold, encrusted with 
+diamonds, emeralds, rubies, and sapphires.
+It is also locked, and too heavy to move.
+
+11
+2		100	 1  0  Golden chalice
+2
+The chalice is about 6 inches high, with a 
+finely detailed design in white and yellow gold.
+
+11
+3		100	 1	0  Purple potion
+3
+The potion is in a small stoppered glass bottle.
+The purple fluid swirls and shimmers invitingly.
+There seems to be one good dose in the bottle.
+
+11
+4		50	1	0  Holly wand
+1
+This wand is light and delicate, fashioned of holly wood.
+
+11
+7		40	1	0  Oak mallet
+2
+This is a large wooden mallet, with a 3-foot handle
+and a large wooden head about 6 inches in diameter.
+
+11
+8		20	1	0  Leather bag
+1
+This large leather bag looks like it would hold a lot.
+
+11
+9		11	2	1001	Brass key	
+2
+This is a small brass key with some discoloration,
+As if some strong chemicals have spilled on it.
+
