@@ -88,7 +88,7 @@ Christian Rivera:
 	- placetest.gdf
 
 Osama Ahmad:
-	- GUI2, submitting late
+	- GUI2
 	
 Martin Bautista:
 	- GUI3, submitting late
